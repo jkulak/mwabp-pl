@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0" />
+  <title>Internetowe Aplikacje Mobilne - Karty Dobrych Praktyk</title>
+  <link rel="stylesheet" type="text/css" href="minimum.css" />
+  <link rel="stylesheet" type="text/css" href="regular.css" media="only all and (min-width: 300px)" />
+  <link rel="stylesheet" type="text/css" href="large.css" media="only all and (min-width: 600px)" />
+  <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="regular.css"  media="screen" />
+    <![if gt IE 6]>
+        <link rel="stylesheet" type="text/css" href="large.css"  media="screen" />
+    <![endif]>
+  <![endif]-->
+  <style type="text/css">
+    body { margin-left: 5%; margin-top: 5%; }
+    a:link img, a:visited img { border-style: none; }
+    a img { color: white; } /* hide the border in Netscape 4 */
+    @media all { /* hide from Netscape 4 */
+      a img { color: inherit; }    /* undo the rule above */
+    }
+    #disclaimer { margin: 10px 10px 10px 0; border: 2px solid #db9; padding: 4px; background: #fdb;}
+    #disclaimer h3 {text-align: left; margin-top: 4px;}
+    #disclaimer p {margin-bottom: 8px;}
+  </style>
+</head>
+<body>
+  <div class="head">
+    <p><a href="http://www.w3.org" shape="rect"><img alt="W3C" src=
+    "img/w3c_home.png" width="72" height="48" /></a></p>
+    <h1>Internetowe Aplikacje Mobilne - Karty Dobrych Praktyk</h1>
+  </div>
+  
+  <div id="disclaimer">
+    <h3>Wyjaśnienie</h3>
+    <p>Dokument ten jest polskim tłumaczeniem angielskiego dokumentu <strong>"Mobile Web Application Best Practices Cards"</strong> (<a href="http://www.w3.org/2010/09/MWABP/">http://www.w3.org/2010/09/MWABP/)</a>.</p>
+    <p>Tłumaczenie to może zawierać błędy, w przypadku sugestii dotyczących poprawek proszę o kontakt z autorem tłumaczenia.</p>
+    <p>Tłumaczenie zostało wykonane w styczniu 2011, przez Jakuba Kułaka (jakub.kulak@gmail.com).</p>
+    <p>Jedynym oficjalnym dokumentem W3C jest oryginał w języku angielskim na stronach W3C, pod adresem: <a href="http://www.w3.org/2010/09/MWABP/">http://www.w3.org/2010/09/MWABP/)</a></p>
+  </div>
+  
+<p>Poniższe karty podsumowują dokument <a href="http://www.w3.org/TR/mwabp/">Internetowe Aplikacje Mobilne - Dobre Praktyki</a>  (w języku angielskim). Wskazówki te 
+  mają na celu usprawnić tworzenie dynamicznych i bogatych aplikacji internetowych (RIA). Karty są również dostępne w <a href="http://www.w3.org/2010/09/MWABP/mwabp.pdf"
+  title="Mobile Web Application Best Practices (PDF)">wersji PDF</a> (język angielski).</p>
+
+<!-- <p>Karty Dobrych Praktyk są dodatkowo dostępne w językach: <a href="http://www.w3.org/2010/09/MWABP/">angielskim (oryginalny)</a>, <a
+href="http://www.w3.org/2010/09/MWABP/Overview.html.fr">francuskim</a>, <a href="http://www.w3c.org.il/AD/mwabp/">hebrajskim</a>, <a
+href="http://www.w3c.or.kr/Translation/MWABP/">koreańskim</a>, <a
+href="http://www.w3c.es/Divulgacion/Tarjetas/MWABP/">hiszpańskim</a> oraz <a
+href="http://www.w3c.se/resources/office/translations/mwabp-cards/index.sv.html">szwedzkim</a>.</p> -->
+
+<p>W celu uzyskania dodatkowych informacji proszę kontaktować się z Marie-Claire Forgue &lt;w3t-comm@w3.org&gt;.</p>
+<div id="cards">
+
+<div id="mwabp" class="card cover">
+<h2><acronym title="World Wide Web Consortium"><span>W3C</span></acronym>
+Internetowe Aplikacje Mobilne - <span class="bp">Dobre Praktyki</span></h2>
+<ul class="nav">
+  <li><a href="#network" class="nav-network"><span>Oszczędzaj ruch sieciowy</span></a></li>
+  <li><a href="#free" class="nav-free"><span>Daj użytkownikom wolną rękę</span></a></li>
+  <li><a href="#web" class="nav-web"><span>Pamiętaj o podstawowych zasadach Internetu</span></a></li>
+  <li><a href="#flexible" class="nav-flexible"><span>Projektuj mając na uwadze elastyczność</span></a></li>
+  <li><a href="#exploit" class="nav-exploit"><span>Wykorzystuj możliwości urządzeń przenośnych</span></a></li>
+  <li><a href="#optimize" class="nav-optimize"><span>Skracaj czas ładowania stron</span></a></li>
+</ul>
+</div>
+
+<div id="network" class="card">
+<h3 class="icon network">Oszczędzaj ruch sieciowy</h3>
+
+<p class="desc">Wykorzystuj odpowiednio możliwości protokołów, aby zapobiec powstawaniu wąskich gardeł oraz zbędnych opóźnień.</p>
+<ul>
+  <li>Kompresuj wysyłany kontent.</li>
+  <!-- <li>Cache resources by fingerprinting resource references.</li> -->
+  <li>Keszuj dane przesyłane asynchronicznie (AJAX).</li>
+  <li>Zmniejszaj maksymalnie odwołania do zasobów zewnętrznych.</li>
+  <li>Zmniejszaj maksymalnie rozmiary aplikacji i używanych danych.</li>
+  <li>Nie szalej z ciasteczkami.</li>
+  <li>Nie przesyłaj informacji o ciasteczkach, jeżeli nie jest to konieczne.</li>
+  <li>Optymalizuj ilość zapytań do serwera.</li>
+  <li>Unikaj przekierowań.</li>
+</ul>
+
+<p class="top"><a href="#mwabp">do góry ↑</a></p>
+</div>
+
+<div id="free" class="card">
+<h3 class="icon free">Daj użytkownikowi wolną rękę</h3>
+
+<p class="desc">Urządzenia mobilne są używane na wiele sposobów, począwszy od zabijania czasu, aż po pilne załatwianie spraw. Pozwól użytkownikom zapanować nad sytuacją, aby zaufali Twojej aplikacji.</p>
+<ul>
+  <li>Upewnij się, że użytkownik wie o wykorzystaniu danych osobowych, oraz danych jego urządzenia.</li>
+  <li>Udostępnij opcję automatycznego logowania.</li>
+  <li>Pozwól użytkownikowi dopasować interfejs do swoich potrzeb.</li>
+  <li>Nie przewijaj nic samoczynnie, kiedy strona aktualizuje się w innym miejscu automatyczie.</li>
+</ul>
+
+<p class="top"><a href="#mwabp">do góry ↑</a></p>
+</div>
+
+<div id="web" class="card">
+<h3 class="icon web">Pamiętaj o podstawowych zasadach Internetu</h3>
+
+<p class="desc">Urządzenia mobilne są tylko jednym z wielu sposobów korzystania z Internetu. Pamiętaj, że podstawowe zasady tworzenia aplikacji internetowych, mają zastosowanie także tutaj.</p>
+<ul>
+  <li>Replikuj dane lokalnie.</li>
+  <li>Zapewnij tożsamość aplikacji na różnych urządzeniach.</li>
+  <li>Nigdy nie uruchamiaj niepewnych/niezabezpieczonych danych w JSONie.</li>
+  <li>Korzystaj z ID elementów, aby sterować widokiem aplikacji.</li>
+</ul>
+
+<p class="top"><a href="#mwabp">do góry ↑</a></p>
+</div>
+
+<div id="flexible" class="card">
+<h3 class="icon flexible">Projektuj mając na uwadze elastyczność</h3>
+
+<p class="desc">Aplikacje internetowe są używane w rozwijających się i różnorodnych środowiskach. Elastyczność pozwoli Ci dotrzeć do większej ilości użytkowników, bez powiększania kosztów.</p>
+<ul>
+  <li>Projektuj z myślą o różnych rodzajach interakcji z aplikacją.</li>
+  <li>Pisz uniwersalnym językiem.</li>
+  <li>Tam gdzie to możliwe rozpoznawaj urządzenie po stronie serwera, unikaj rozpoznawania po stronie klienta.</li>
+  <li>Klasyfikuj urządzenia, aby sobie ułatwić dopasowanie aplikacji.</li>
+  <li>Tam gdzie to ma sens, zapewnij działanie aplikacji bez Javascript.</li>
+</ul>
+
+<p class="top"><a href="#mwabp">do góry ↑</a></p>
+</div>
+
+<div id="exploit" class="card">
+<h3 class="icon exploit">Wykorzystuj możliwości urządzeń przenośnych</h3>
+
+<p class="desc">Niektóre technologie są stworzone do wykorzystania w urządzeniach mobilnych - naucz się z nich korzystać.</p>
+<ul>
+  <li>Spraw, aby pod wyświetlane numery telefonów, po kliknięciu można było zadzwonić.</li>
+  <li>Używaj technologii dedykowanych dla aplikacji mobilnych.</li>
+  <li>Skorzystaj z meta znacznika viewport aby rozpoznać rozmiary ekranu urządzenia.</li>
+  <li>Wykorzystuj odpowiednie metody zapisu danych po stronie klienta w zależności od urządzenia.</li>
+</ul>
+
+<p class="top"><a href="#mwabp">do góry ↑</a></p>
+</div>
+
+<div id="optimize" class="card">
+<h3 class="icon optimize">Skracaj czas ładowania stron</h3>
+
+<p class="desc">W mobilnych aplikacjach internetowych liczy się każdy szczegół, nawet drobna zmiana może mieć znaczący wpływ na wrażenia użytkownika.</p>
+<ul>
+  <li>Połącz statyczne grafiki w jeden plik (metoda sprites).</li>
+  <li>Grafiki teł ładuj za pomocą CSS.</li>
+  <li>Utrzymuj rozsądny rozmiar struktury DOM.</li>
+  <li>W pierwszej kolejności, maksymalnie zmniejszaj bezpośrednio odczuwalne opóźnienia.</li>
+  <li>Spraw aby aplikacja załadowała się użytkownikowi tak szybko jak to możliwe.</li>
+</ul>
+
+<p class="top"><a href="#mwabp">do góry ↑</a></p>
+</div>
+
+<div id="ack" class="card last">
+<h3>Zmobilizuj swoje aplikacje!</h3>
+
+<p>Powyższe wskazówki mają na celu usprawnić tworzenie dynamicznych i bogatych aplikacji internetowych. Aby uzyskać więcej informacji:</p>
+
+<p><a href="http://www.w3.org/TR/mwabp/">www.w3.org/TR/mwabp/</a></p>
+
+<p class="mobiwebapp">Wspierane przez projekt UE MobiWebApp FP7 EU</p>
+
+<p><a href="http://mobiwebapp.eu">mobiwebapp.eu</a></p>
+
+<p class="top"><a href="#mwabp">do góry ↑</a></p>
+</div>
+</div>
+</body>
+</html>

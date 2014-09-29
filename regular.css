@@ -1,0 +1,158 @@
+/************************************************************
+Regular stylesheet for Mobile Web Application Best Practices
+cards, applied on top of the minimal style sheet (minimum.css)
+when window is wider than 300px, provided that device supports
+CSS media queries.
+************************************************************/
+
+
+/*************************************************
+Titles, text and lists
+*************************************************/
+h3 {
+ margin-top: 0;
+}
+
+h2 {
+ font-size: 1.5em;
+}
+
+.bp {
+ font-size: 1.6em;
+}
+
+ul {
+ font-size: 90%;
+}
+
+
+/*************************************************
+Invert card text color and add background images
+*************************************************/
+.card {
+ background-color: transparent;
+ background-image: url('img/regular/bg-page.png');
+ border: none;
+ padding: 55px 35px 0;
+ width: 230px;
+ height: 365px;
+ position: relative;
+}
+
+
+/*************************************************
+Cover card
+*************************************************/
+.cover {
+ background-image: url('img/regular/bg-cover.png');
+}
+
+/* Exchange block positions */
+.cover h2 {
+ position: relative;
+ top: 140px;
+}
+
+.nav  {
+ position: relative;
+ top: -100px;
+}
+
+.nav li {
+ display: block;
+ float: left;
+}
+
+.nav a {
+ background-color: transparent;
+ background-repeat: no-repeat;
+ background-position: center;
+ width: 58px;
+ height: 58px;
+ display: block;
+ margin: 5px;
+}
+
+.nav-network { background-image: url('img/regular/icon-network.png'); }
+.nav-free { background-image: url('img/regular/icon-free.png'); }
+.nav-exploit { background-image: url('img/regular/icon-exploit.png'); }
+.nav-optimize { background-image: url('img/regular/icon-optimize.png'); }
+.nav-web { background-image: url('img/regular/icon-web.png'); }
+.nav-flexible { background-image: url('img/regular/icon-flexible.png'); }
+
+
+.nav a span {
+ display: none;
+}
+
+/* Clear the float after the navigation menu */
+.nav:after {
+ content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+ visibility: hidden;
+ clear: both;
+ height: 0 !important;
+ display: block;
+ line-height: 0;
+ font-size: 36px;
+}
+
+.cover acronym {
+ display: block;
+ width: 27px;
+ height: 14px;
+ margin: 5px auto;
+ background: transparent url('img/regular/icon-w3c.png') no-repeat center top;
+ border-bottom: none;
+}
+
+.cover acronym span {
+ display: none;
+}
+
+
+/*************************************************
+Back to top links
+*************************************************/
+.top {
+ position: absolute;
+ bottom: 40px;
+ right: 35px;
+ margin-right: 0;
+}
+
+
+/*************************************************
+Last card
+*************************************************/
+.last {
+ background-image: url('img/regular/bg-last.png');
+}
+
+.last h3 {
+ margin-top: 45px;
+}
+
+.last .top {
+ bottom: 20px;
+}
+
+/* Note that the regular style sheet is applied
+when screen is wider than 300px, so the Mobiwebapp
+logo should already be displayed (as defined in
+minimum.css), but we'll add it here anyway for
+browsers that don't support CSS Media Queries  */
+.mobiwebapp {
+ margin-top: 10em;
+ font-size: 80%;
+ background: transparent url('img/regular/logo-mobiwebapp.png') no-repeat center top;
+ padding-top: 50px;
+}
+
+
+/*************************************************
+Two columns when screen is large enough
+*************************************************/
+.card {
+ float: left;
+ margin-left: 1em;
+}

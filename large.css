@@ -1,0 +1,114 @@
+/************************************************************
+tylesheet for Mobile Web Application Best Practices cards,
+applied on top of the regular and minimum style sheets
+(minimum.css and regular.css) when window is wider than 650px,
+provided that device supports CSS media queries.
+************************************************************/
+
+
+/*************************************************
+Invert card text color and add background images
+*************************************************/
+.card {
+ font-size: 100%;
+ max-width: 450px;
+ background-image: url('img/large/bg-page.png');
+ padding: 90px 60px 0;
+ width: 309px;
+ height: 510px;
+}
+
+ul {
+ font-size: 100%;
+}
+
+
+/*************************************************
+Cover card
+*************************************************/
+.cover {
+ background-image: url('img/large/bg-cover.png');
+}
+
+/* Exchange block positions */
+.cover h2 {
+ position: relative;
+ top: 200px;
+}
+
+.nav  {
+ position: relative;
+ top: -130px;
+}
+
+.nav a {
+ width: 83px;
+ height: 83px;
+}
+
+.nav-network { background-image: url('img/large/icon-network.png'); }
+.nav-free { background-image: url('img/large/icon-free.png'); }
+.nav-exploit { background-image: url('img/large/icon-exploit.png'); }
+.nav-optimize { background-image: url('img/large/icon-optimize.png'); }
+.nav-web { background-image: url('img/large/icon-web.png'); }
+.nav-flexible { background-image: url('img/large/icon-flexible.png'); }
+
+.nav a span {
+ display: none;
+}
+
+.cover acronym {
+ width: 39px;
+ height: 21px;
+ background-image: url('img/large/icon-w3c.png');
+}
+
+
+/*************************************************
+Icons
+*************************************************/
+.icon {
+ padding-top: 100px;
+}
+
+.network { background-image: url('img/large/icon-network.png'); }
+.free { background-image: url('img/large/icon-free.png'); }
+.exploit { background-image: url('img/large/icon-exploit.png'); }
+.optimize { background-image: url('img/large/icon-optimize.png'); }
+.web { background-image: url('img/large/icon-web.png'); }
+.flexible { background-image: url('img/large/icon-flexible.png'); }
+
+
+
+/*************************************************
+Last card
+*************************************************/
+.last {
+ background-image: url('img/large/bg-last.png');
+}
+
+.last h3 {
+ margin-top: 45px;
+}
+
+/* Note that the regular style sheet is applied
+when screen is wider than 300px, so the Mobiwebapp
+logo should already be displayed (as defined in
+minimum.css), but we'll add it here anyway for
+browsers that don't support CSS Media Queries  */
+.mobiwebapp {
+ margin-top: 10em;
+ font-size: 80%;
+ background: transparent url('img/large/logo-mobiwebapp.png') no-repeat center top;
+ padding-top: 70px;
+}
+
+
+/*************************************************
+Back to top links
+*************************************************/
+.top {
+ position: absolute;
+ bottom: 60px;
+ right: 60px;
+}
